@@ -161,7 +161,7 @@ export default async function handler(req, res) {
     // 1. Validation & sanitization
     if (typeof mode !== 'string' || !PERSONAS[mode.trim()]) {
       return res.status(400).json({
-        error: 'Invalid mode. Allowed modes: interrogation, lovable, warrior, sadist.'
+        error: 'Invalid mode. Allowed modes: interrogation, lovable, warrior, sadist, curious, chill.'
       })
     }
     mode = mode.trim()

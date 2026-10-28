@@ -72,7 +72,7 @@ function generateSimulatedResponse({ mode, name, topic, messages, final, action 
     if (messages.length === 0) {
       return {
         ok: true,
-        text: `### 💡 1. The Core Truth\n${name}, pay close attention to **${topic}**. At its core, this topic describes how underlying principles interact to produce observable reality.\n\n### ⚙️ 2. How the Mechanism Works\nEvery process here operates in structured stages: initial trigger, intermediate transformation, and final equilibrium.\n\n### 🎯 3. The Analogy\nThink of ${topic} like an intricate machine where every gear depends on the friction of the previous one.\n\n### ⚠️ 4. The Examination Trap\nExaminers will try to trick you into confusing causation with correlation here. Don't fall for it.\n\n*Feel free to ask me any questions, or click below when you're ready to test your knowledge in the 5-Round Scrutiny!*`
+        text: `### 💡 1. The Core Truth\n${name}, pay close attention to **${topic}**. At its core, this topic describes how fundamental principles interact to produce observable reality.\n\n### ⚙️ 2. How the Mechanism Works\nEvery process here operates in structured stages: initial trigger, intermediate transformation, and final equilibrium.\n\n### 🎯 3. The Analogy\nThink of ${topic} like an intricate machine where every gear depends on the friction of the previous one.\n\n### ⚠️ 4. The Examination Trap\nExaminers will try to trick you into confusing causation with correlation here. Don't fall for it.\n\n*Feel free to ask me any questions, or click below when you're ready to test your knowledge in the 5-Round Scrutiny!*`
       }
     } else {
       return {
@@ -97,9 +97,9 @@ function generateSimulatedResponse({ mode, name, topic, messages, final, action 
         ]
       },
       lovable: {
-        verdict: 'SURVIVED WITH SCARS',
-        score: 88,
-        summary: `Even through the melancholy and heavy weight of '${topic}', you held on, ${name}. Your dedication to understanding this fragile truth was evident.`,
+        verdict: 'SWEET MASTERY',
+        score: 90,
+        summary: `You did so wonderfully, ${name}! Your dedication to learning '${topic}' shone brightly, and you showed real understanding of the heart of the concept.`,
         revise: [
           `Connecting the core relationships in ${topic}`,
           'Pacing yourself through difficult multi-step problems'
@@ -122,6 +122,24 @@ function generateSimulatedResponse({ mode, name, topic, messages, final, action 
           `Review primary theorems of ${topic}`,
           'Stop relying on vague intuition—memorize the hard details'
         ]
+      },
+      curious: {
+        verdict: 'CERTIFIED BRAINIAC BRO',
+        score: 89,
+        summary: `Yo ${name}, you totally crushed the scrutiny on '${topic}'! Your curiosity and deep-dive logic were top-tier throughout all 5 rounds.`,
+        revise: [
+          `Fine-tune specific edge-case terminology in ${topic}`,
+          'Explore advanced multi-system interactions'
+        ]
+      },
+      chill: {
+        verdict: 'SERENE MASTERY',
+        score: 88,
+        summary: `Smooth and steady, ${name}. You kept your cool under questioning and broke down '${topic}' with pure tranquil clarity.`,
+        revise: [
+          `Solidify fundamental definitions in ${topic}`,
+          'Keep that calm composure on tricky questions'
+        ]
       }
     }
 
@@ -141,11 +159,11 @@ function generateSimulatedResponse({ mode, name, topic, messages, final, action 
       `Final round before sentencing. Give me your absolute strongest synthesis of '${topic}'. Everything rests on this.`
     ],
     lovable: [
-      `Oh ${name}... '${topic}' feels so overwhelmingly heavy and fragile, doesn't it? Tell me the simple core idea you're holding onto so we don't get lost in the dark.`,
-      `You did well, though a small piece slipped away—the truth is more connected than that. When '${topic}' is tested, how does it hold together?`,
-      `It's so easy to slip, but you're finding your footing. Can you gently explain how its key components relate to one another?`,
-      `We're almost through the mist, ${name}. What is the deepest, most melancholic truth about '${topic}' that most people overlook?`,
-      `One final breath together. Summarize everything '${topic}' means to you in this study session.`
+      `Welcome, ${name}! '${topic}' is such a lovely, fascinating subject. Can you share the main core idea that excites you most about it?`,
+      `That was such a thoughtful start! In truth, there is an even deeper layer here. When '${topic}' is applied in practice, what makes it hold together?`,
+      `You're doing so well, ${name}. Let's take it one gentle step further. How do the primary pieces of '${topic}' support each other?`,
+      `Almost there, my dear friend. What is the most beautiful, subtle truth about '${topic}' that people often miss?`,
+      `Final round together! Give me your warmest, most complete summary of '${topic}'.`
     ],
     warrior: [
       `STAND AT ATTENTION, ${name}! You want to conquer '${topic}'?! State the primary tactical objective and core definition—NOW!`,
@@ -160,6 +178,20 @@ function generateSimulatedResponse({ mode, name, topic, messages, final, action 
       `Your logic is leaking like a cracked beaker! How do you account for the critical complexities in '${topic}'? Or do you need me to hold your hand?`,
       `Still squirming? I expected better sport! What makes you think your grasp on '${topic}' wouldn't crumble the moment an actual exam starts?`,
       `One last gasp before I hand down your judgment. Make your final stand on '${topic}'—entertain me!`
+    ],
+    curious: [
+      `Yo ${name}! So hyped to break down '${topic}' with you! What's the wildest, core fundamental law behind how this whole thing kicks off?!`,
+      `Whoa, nice angle! That part is definitely true, but here's where it gets crazy: what actually happens when '${topic}' runs into unexpected friction?`,
+      `Bro, you're on to something! Dig a little deeper into the gears—what is the exact sequence that makes '${topic}' tick?`,
+      `Okay, imagine an examiner throws a curveball at you about the most controversial debate in '${topic}'. How would you defend it, bro?`,
+      `Final round, ${name}! Drop your absolute sickest, most complete breakdown of '${topic}' right here!`
+    ],
+    chill: [
+      `Hey ${name}. No rush, no stress at all. Whenever you're ready, just share the basic core idea of '${topic}' with me.`,
+      `Good start, very clean. The actual concept is pretty straightforward when you look at it. How does '${topic}' usually handle unusual conditions?`,
+      `Right on track. Let's look at the next step together. What are the key elements working behind the scenes in '${topic}'?`,
+      `Doing great, nice and steady. What would you say is the most important thing to remember about '${topic}' when an exam question tries to trip you up?`,
+      `Last question, ${name}. Keep that same relaxed composure and summarize '${topic}' in your own calm words.`
     ]
   }
 
