@@ -3,7 +3,13 @@ export default function handler(req, res) {
     return res.status(405).json({ ok: false, error: 'Method not allowed' })
   }
 
-  const hasApiKey = Boolean(process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY.trim().length > 0)
+  const rawKey =
+    process.env.GEMINI_API_KEY ||
+    process.env.GOOGLE_API_KEY ||
+    process.env.VITE_GEMINI_API_KEY ||
+    process.env.GEMINI_KEY ||
+    ''
+  const hasApiKey = Boolean(rawKey.trim().length > 0)
 
   return res.status(200).json({
     ok: true,
