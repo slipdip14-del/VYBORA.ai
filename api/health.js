@@ -5,6 +5,8 @@ export default function handler(req, res) {
 
   const rawKey =
     process.env.GEMINI_API_KEY ||
+    process.env.gemini ||
+    process.env.GEMINI ||
     process.env.GOOGLE_API_KEY ||
     process.env.VITE_GEMINI_API_KEY ||
     process.env.GEMINI_KEY ||
